@@ -31,11 +31,6 @@ class SpaceshipEntity: GKEntity {
                                                     phycisBodyType: .static,
                                                     node: meshComponent.node)
         addComponent(collisionComponent)
-        
-//        if let scene = meshComponent.scene {
-//            bulletSpawnPoint = scene.rootNode.childNode(withName: "Bullet", recursively: false)
-//            meshComponent.node?.addChildNode(bulletSpawnPoint!)
-//        }
     }
     
     override func update(deltaTime seconds: TimeInterval) {
