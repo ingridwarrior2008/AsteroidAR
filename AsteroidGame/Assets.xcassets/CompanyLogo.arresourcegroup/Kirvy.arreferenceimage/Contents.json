@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Kirvy.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "unit" : "centimeters",
+    "width" : 30.260000000000002
+  }
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="AsteroidGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the logo to spawn Spaceship" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gU-iY-VSN" userLabel="FindLogo">
+                                <rect key="frame" x="319.5" y="20" width="257.5" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.58614004629629635" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="BFK-pU-T0w"/>
+                                    <constraint firstAttribute="height" constant="33" id="C6g-3X-kai"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6V-H7-PVQ" userLabel="Score">
+                                <rect key="frame" x="672" y="20" width="143" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.58614004630000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Qn-1K-Mxn" userLabel="rightButton">
+                                <rect key="frame" x="755" y="308" width="60" height="60"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ZTY-21-aaU"/>
+                                    <constraint firstAttribute="width" constant="60" id="vxm-QQ-1db"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="didTapMoveRight:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Vig-a9-eVM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vI-gu-aeQ" userLabel="fireButton">
+                                <rect key="frame" x="755" y="217" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="KZ1-h7-xn4"/>
+                                    <constraint firstAttribute="height" constant="60" id="iXr-Ze-dY5"/>
+                                </constraints>
+                                <state key="normal" title="Fire">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapFire:" destination="BV1-FR-VrT" eventType="touchUpInside" id="LfZ-01-wKl"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpc-I1-nb4" userLabel="Ready">
+                                <rect key="frame" x="319.5" y="180" width="257.5" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.58614004630000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257.5" id="Jbd-pb-UNh"/>
+                                    <constraint firstAttribute="height" constant="33" id="Mqn-pr-pDj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S5-iS-siD" userLabel="LeftButton">
+                                <rect key="frame" x="92" y="308" width="60" height="60"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="WPt-0f-Oz2"/>
+                                    <constraint firstAttribute="height" constant="60" id="ygm-7I-1tI"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="didTapMoveLeft:" destination="BV1-FR-VrT" eventType="touchUpInside" id="SeK-BM-wqF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="6Qn-1K-Mxn" secondAttribute="bottom" constant="25" id="7KK-ga-iqY"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="7vI-gu-aeQ" secondAttribute="trailing" constant="37" id="9PF-lW-wav"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="6Qn-1K-Mxn" firstAttribute="top" secondItem="7vI-gu-aeQ" secondAttribute="bottom" constant="31" id="Iom-sP-UFY"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="9S5-iS-siD" secondAttribute="bottom" constant="25" id="KCt-CO-Jde"/>
+                            <constraint firstItem="9S5-iS-siD" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="48" id="PoJ-Vr-Dgw"/>
+                            <constraint firstItem="3gU-iY-VSN" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="20" id="UpB-xn-Umr"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="6Qn-1K-Mxn" secondAttribute="trailing" constant="37" id="dfD-mm-gne"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstItem="xpc-I1-nb4" firstAttribute="centerY" secondItem="fQZ-KI-GVf" secondAttribute="centerY" id="sOU-Qf-nZB"/>
+                            <constraint firstItem="3gU-iY-VSN" firstAttribute="centerX" secondItem="fQZ-KI-GVf" secondAttribute="centerX" id="uvv-qw-aef"/>
+                            <constraint firstItem="xpc-I1-nb4" firstAttribute="centerX" secondItem="fQZ-KI-GVf" secondAttribute="centerX" id="zpe-eJ-Oxr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                    </view>
+                    <connections>
+                        <outlet property="findLogoLabel" destination="3gU-iY-VSN" id="7qn-5q-gDc"/>
+                        <outlet property="readyLabel" destination="xpc-I1-nb4" id="GDN-1P-0Xy"/>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="scoreLabel" destination="x6V-H7-PVQ" id="ncP-bJ-lhI"/>
+                        <outletCollection property="buttons" destination="7vI-gu-aeQ" collectionClass="NSMutableArray" id="PFh-AY-omN"/>
+                        <outletCollection property="buttons" destination="6Qn-1K-Mxn" collectionClass="NSMutableArray" id="twY-3c-E3H"/>
+                        <outletCollection property="buttons" destination="9S5-iS-siD" collectionClass="NSMutableArray" id="vvX-yv-ZOq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.61607142857142" y="114.49275362318842"/>
+        </scene>
+    </scenes>
+</document>
